@@ -6,11 +6,7 @@ var app = express();
 
 kue.createQueue(
   {
-//  redis: {
-  //  host: 'localhost',
-   // port: 6379
-  //}
-  redis: 'redis://h:pf9de8653472bcd97e2ac00473d6dd80505495c44b56c08daf3035e42388904ad@ec2-52-5-188-199.compute-1.amazonaws.com:22129'
+  redis: process.env.REFIS_URL
   }
 );
 
